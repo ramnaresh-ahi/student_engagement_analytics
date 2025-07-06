@@ -1,0 +1,142 @@
+
+version: 2
+
+models:
+  - name: stg_course_ratings
+    description: "This table contains rating of courses given by students."
+    columns: 
+      - name: course_rating_id
+        description: "This is a primary key (unique indentifier for each row) for this table."
+        tests:
+          - not_null
+          - unique
+      - name: course_rating
+        description: "This column contains rating for each course given by students."
+      - name: rated_date
+        description: "When rate is given by students."
+  
+  - name: stg_courses
+    description: "This table contains courses."
+    columns:
+      - name: course_id
+        description: "This is a primary key(uniques indentifier for each row) for this table."
+        tests:
+          - not_null
+          - unique
+      - name: course_title
+        description: "The name of each course."
+
+  - name: stg_exams
+    description: "This table contains exams."
+    columns:
+      - name: exam_id
+        description: "This is a primary key(unique identifier for each row) for this table."
+        tests:
+          - not_null
+          - unique
+      - name: exam_category
+        description: "The category of exam."
+      - name: exam_duration_in_min
+        description: "Duration of exam in minutes."
+  
+  - name: stg_learnings
+    description: "This table contains the learning history of students."
+    columns:
+      - name: learning_id
+        description: "This is a surrogate key for this table."
+        tests:
+          - not_null
+      - name: minutes_watched
+        description: "The number of minutes watched by student."
+      - name: watched_date
+        description: "The date of watched."
+  
+  - name: stg_purchases
+    description: "This table contains data of course purchased by the students."
+    columns: 
+      - name: purchase_id
+        description: "This is a primary key(unique identifier for each row) for this table."
+        tests:
+          - not_null
+          - unique
+      - name: purchase_type
+        description: "Which type of course's subscription purchased(monthly, quaterly and annually) by students."
+      - name: purchased_date
+        description: "When course was purchased by students."
+  
+  - name: stg_questions
+    description: "This table contains the informatin of questions asked by students."
+    columns:
+      - name: question_id
+        description: "This is a primary key(unique identifier for each row) for this table."
+        tests:
+          - not_null
+          - unique
+      - name: asked_date
+        description: "When questions were asked by students."
+
+  - name: stg_quizzes
+    description: "This table contains the information of quizzes."
+    columns:
+      - name: quiz_id
+        description: "This is a surrogate key for this table."
+        tests: 
+          - not_null
+      - name: answer_id
+        description: "It should be not null and unique because it contain's the answer of quiz."
+
+  - name: stg_student_engagement
+    description: "This table contains the information of engagement means when were students engaged with quizzes, exams and lessons."
+    columns:
+      - name: engagement_id
+        description: "This is a primary key(unique identifier for each row) for this table."
+        tests:
+          - not_null
+          - unique
+      - name: engagement_quizzes
+        description: "The number of times a student has engaged with quizzes."
+      - name: engagement_exams
+        description: "The number of times a student has engaged with exams."
+      - name: engagement_lessons
+        description: "The number of times a student has engaged with lessons."
+  
+  - name: stg_student_exams
+    description: "This table contains the information exams attempted by students."
+    columns: 
+      - name: exam_attempt_id
+        description: "This is a primary key(unique identifier for each row) for this table."
+        tests:
+          - not_null
+          - unique
+      - name: exam_result
+        description: "The results of the exam."
+      - name: completion_time
+        description: "The time it took to complete the exam."
+      - name: completed_date
+        description: "The date the exam was completed."
+
+  - name: stg_student_quizzes
+    description: "This table contains the information of quizzes atttempted by students."
+    columns: 
+      - name: student_quiz_id
+        description: "This is a surrogate key for this table."
+        tests:
+          - not_null
+  
+  - name: stg_students
+    description: "This table contains the information of students."
+    columns: 
+      - name: student_id
+        description: "This is a primary key(unique identifier for each row) for this table."
+        tests: 
+          - not_null
+          - unique
+      - name: student_country
+        description: "The country of the student."
+      - name: registered_date
+        description: "The date the student registered for the course."
+
+
+
+
+
