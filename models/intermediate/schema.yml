@@ -1,0 +1,51 @@
+
+version: 2
+
+models: 
+  - name: int_course_ratings
+    description: "This table contains the information of course's ratings given by students."
+    columns:
+      - name: course_rating_id
+        description: "This is primary key for this table."
+        tests:
+          - not_null
+          - unique
+          
+  
+  - name: int_exmas
+    description: "This table contains the information of exams attempted by students."
+    columns:
+      - name: exam_attempt_id
+        description: "This is a primary key for this table."
+        tests:
+          - not_null
+          - unique
+          
+      
+  - name: int_learnings
+    description: "This table contains the information of learning or watching videos of courses by students."
+    columns: 
+      - name: learning_id
+        description: "This is a primary key for this table."
+        tests:
+          - not_null
+          - unique
+  
+  - name: int_quizzes
+    description: "This table contains the information of quizzes solved by students."
+    columns:
+      - name: quiz_id
+        description: "This is a primary key for this table."
+        tests:
+          - not_null
+          - unique
+  
+  - name: int_students
+    description: "This table contains the information of students."
+    columns:
+      - name: student_id
+        description: "This is a primary key for this table."
+        tests:
+          - not_null
+          - unique
+          
