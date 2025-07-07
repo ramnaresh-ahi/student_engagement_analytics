@@ -46,6 +46,8 @@ models:
         description: "This is a surrogate key for this table."
         tests:
           - not_null
+          - unique
+          
       - name: minutes_watched
         description: "The number of minutes watched by student."
       - name: watched_date
@@ -78,10 +80,12 @@ models:
   - name: stg_quizzes
     description: "This table contains the information of quizzes."
     columns:
-      - name: quiz_id
+      - name: id
         description: "This is a surrogate key for this table."
         tests: 
           - not_null
+          - unique
+          
       - name: answer_id
         description: "It should be not null and unique because it contain's the answer of quiz."
 
@@ -122,6 +126,8 @@ models:
         description: "This is a surrogate key for this table."
         tests:
           - not_null
+          - unique
+          
   
   - name: stg_students
     description: "This table contains the information of students."

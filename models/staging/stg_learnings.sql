@@ -1,7 +1,7 @@
 
 WITH learnings AS(
     SELECT
-        {{ dbt_utils.generate_surrogate_key(['student_id', 'course_id']) }} as learning_id,
+        {{ dbt_utils.generate_surrogate_key(['student_id', 'course_id','date_watched']) }} as learning_id,
         student_id,
         course_id,
         minutes_watched,
