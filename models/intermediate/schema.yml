@@ -10,6 +10,10 @@ models:
         tests:
           - not_null
           - unique
+      - name: rated_by
+        description: "how many students have rated this course."
+      - name: avg_rating
+        description: "Average rating given by the students to this course."
           
   
   - name: int_exmas
@@ -30,6 +34,10 @@ models:
         tests:
           - not_null
           - unique
+      - name: watching_by
+        description: "This course is watching by the number of students."
+      - name: avg_watching_time_per_student_in_minutes
+        description: "avg watching time of this course per student in minutes."
   
   - name: int_quizzes
     description: "This table contains the information of quizzes solved by students."
@@ -39,6 +47,12 @@ models:
         tests:
           - not_null
           - unique
+      - name: total_attempts
+        description: "Total questions attempted by student."
+      - name: total_correct_answers
+        description: "Total correct answers of questions that are attempted by student."
+      - name: result_overview
+        description: "It gives a overview of student's result."
   
   - name: int_students
     description: "This table contains the information of students."
