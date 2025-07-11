@@ -129,7 +129,10 @@ dbt test
 dbt docs generate
 dbt docs serve
 
+```
+
 ---
+
 ## 📌 Status
 
 - ✅ Models and marts implemented  
