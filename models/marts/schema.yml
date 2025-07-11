@@ -1,0 +1,86 @@
+
+version: 2
+
+models:
+  - name: fact_courses_ratings
+    description: "This table contains all information of course's rating."
+    columns:
+      - name: student_id
+        tests:
+          - relationships:
+              to: ref('dim_students')
+              field: student_id
+
+      - name: course_id
+        tests:
+          - relationships:
+              to: ref('dim_courses')
+              field: course_id
+
+  - name: fact_exams
+    description: "This table contains exam's data."
+    columns:
+      - name: student_id
+        tests:
+          - relationships:
+              to: ref('dim_students')
+              field: student_id
+
+  - name: fact_learnings
+    description: "This table contains data of student's learning."
+    columns:
+      - name: student_id
+        tests:
+          - relationships:
+              to: ref('dim_students')
+              field: student_id
+      - name: course_id
+        tests:
+          - relationships:
+              to: ref('dim_courses')
+              field: course_id
+
+  - name: fact_quizzes
+    description: "This table contains data of student's quizzes."
+    columns:
+      - name: student_id
+        tests:
+          - relationships:
+              to: ref('dim_students')
+              field: student_id
+    
+  - name: dim_students
+    description: "This table contains the data of student's."
+    columns:
+      - name: student_id
+        description: "This is a primary key for this table."
+        tests:
+          - not_null
+          - unique
+    
+  - name: dim_courses
+    description: "This table contains the data of course's."
+    columns:
+      - name: course_id
+        description: "This is a primary key for this table."
+        tests:
+          - not_null
+          - unique
+  
+  - name: fact_students_engagements
+    description: "This table contains the data of student's activities."
+    columns:
+      - name: student_id
+        tests:
+          - relationships:
+              to: ref('dim_students')
+              field: student_id
+      - name: participated_learning
+        description: "does student participate in leanring, if yes then true else false."
+      - name: participated_exam
+        description: "does student participate in exam, if yes then true else false."
+      - name: participated_quiz 
+        description: "does student participate in quiz, if yes then true else false."
+      - name: most_engaged
+        description: "if student participate in all activities(learning, exam and quiz) then true else false."
+        
