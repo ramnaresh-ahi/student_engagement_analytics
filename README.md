@@ -151,7 +151,7 @@ This includes model details, lineage graphs, and more.
 ## 👤 Author
 
 **Ramnaresh Ahirwar**  
-_Analytics Engineer \| Data Enthusiast_  
+Data Enthusiast_  
 [GitHub Profile](https://github.com/ramnaresh-ahi)
 
 ---
