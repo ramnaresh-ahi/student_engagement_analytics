@@ -133,6 +133,12 @@ dbt docs serve
 
 ---
 
+## 📚 Project Documentation
+
+Explore the full dbt documentation [here](https://ramnaresh-ahi.github.io/student_engagement_analytics/#!/overview)  
+This includes model details, lineage graphs, and more.
+
+---
 ## 📌 Status
 
 - ✅ Models and marts implemented  
