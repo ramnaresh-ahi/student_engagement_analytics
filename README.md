@@ -139,6 +139,12 @@ Explore the full dbt documentation [here](https://ramnaresh-ahi.github.io/studen
 This includes model details, lineage graphs, and more.
 
 ---
+
+## 📊 Dashboard
+
+[Click here to view the Student Engagement Analytics Dashboard](https://github.com/ramnaresh-ahi/student_engagement_analytics/blob/main/dashboard/student_engagement_analytics.png)
+
+---
 ## 📌 Status
 
 - ✅ Models and marts implemented  
