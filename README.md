@@ -36,7 +36,7 @@ This project analyzes **student engagement** with various academic activities in
 ## 🧱 Project Structure
 
 This project follows a **standard dbt architecture**:
-
+```
 student_engagement_analytics/
 │
 ├── models/
@@ -51,7 +51,7 @@ student_engagement_analytics/
 ├── tests/                 # dbt tests
 ├── dbt_project.yml        # dbt project config
 └── README.md              # Project documentation
-
+```
 
 ---
 
